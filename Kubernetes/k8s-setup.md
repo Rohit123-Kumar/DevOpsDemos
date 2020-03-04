@@ -50,7 +50,7 @@
     ```
 1. Create kubernetes cluser
     ```sh 
-      kops update cluster dev.k8s.valaxy.in --yes
+      kops update cluster anynames.valaxy.in --yes
      ```
 1. Validate your cluster 
      ```sh 
@@ -77,5 +77,5 @@
     ```
  1. To delete cluster
     ```sh
-     kops delete cluster dev.k8s.valaxy.in --yes
+     kops delete cluster anynames.valaxy.in --yes
     ```
