@@ -34,11 +34,11 @@
 1. Create a Route53 private hosted zone (you can create Public hosted zone if you have a domain)
 1. create an S3 bucket 
    ```sh
-    aws s3 mb s3://dev.k8s.valaxy.in
+    aws s3 mb s3://de.my.in
    ```
 1. Expose environment variable:
    ```sh 
-    export KOPS_STATE_STORE=s3://dev.k8s.valaxy.in
+    export KOPS_STATE_STORE=s3://de.my.in
    ```
 1. Create sshkeys before creating cluster
    ```sh
@@ -46,11 +46,11 @@
    ```
 1. Create kubernetes cluster definitions on S3 bucket 
    ```sh 
-    kops create cluster --cloud=aws --zones=ap-southeast-1b --name=dev.k8s.valaxy.in --dns-zone=valaxy.in --dns private
+    kops create cluster --cloud=aws --zones=ap-southeast-1b --name=de.my.in --dns-zone=my.in --dns private
     ```
 1. Create kubernetes cluser
     ```sh 
-      kops update cluster anynames.valaxy.in --yes
+      kops update cluster de.my.in --yes
      ```
 1. Validate your cluster 
      ```sh 
